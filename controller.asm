@@ -148,10 +148,10 @@ read_controller:
   lda JOY1
   lsr A
   ldx #$8C
-  bcs .joy1_d0_1
+  bcs .joy1_0
   inx
   inx
-.joy1_d0_1:
+.joy1_0:
   pha
   txa
   sta [draw_offsets], y
@@ -159,10 +159,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy1_d1_1
+  bcs .joy1_1
   inx
   inx
-.joy1_d1_1:
+.joy1_1:
   pha
   txa
   sta [draw_offsets + 2], y
@@ -170,10 +170,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy1_d1_2
+  bcs .joy1_2
   inx
   inx
-.joy1_d1_2:
+.joy1_2:
   pha
   txa
   sta [draw_offsets + 4], y
@@ -181,10 +181,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy1_d1_3
+  bcs .joy1_3
   inx
   inx
-.joy1_d1_3:
+.joy1_3:
   pha
   txa
   sta [draw_offsets + 6], y
@@ -192,10 +192,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy1_d1_4
+  bcs .joy1_4
   inx
   inx
-.joy1_d1_4:
+.joy1_4:
   pha
   txa
   sta [draw_offsets + 8], y
@@ -203,10 +203,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy1_d1_5
+  bcs .joy1_5
   inx
   inx
-.joy1_d1_5:
+.joy1_5:
   pha
   txa
   sta [draw_offsets + 10], y
@@ -214,10 +214,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy1_d1_6
+  bcs .joy1_6
   inx
   inx
-.joy1_d1_6:
+.joy1_6:
   pha
   txa
   sta [draw_offsets + 12], y
@@ -225,10 +225,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy1_d1_7
+  bcs .joy1_7
   inx
   inx
-.joy1_d1_7:
+.joy1_7:
   pha
   txa
   sta [draw_offsets + 14], y
@@ -238,10 +238,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy2_d0_1
+  bcs .joy2_0
   inx
   inx
-.joy2_d0_1:
+.joy2_0:
   pha
   txa
   sta [draw_offsets + 16], y
@@ -249,10 +249,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy2_d1_1
+  bcs .joy2_1
   inx
   inx
-.joy2_d1_1:
+.joy2_1:
   pha
   txa
   sta [draw_offsets + 18], y
@@ -260,10 +260,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy2_d1_2
+  bcs .joy2_2
   inx
   inx
-.joy2_d1_2:
+.joy2_2:
   pha
   txa
   sta [draw_offsets + 20], y
@@ -271,10 +271,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy2_d1_3
+  bcs .joy2_3
   inx
   inx
-.joy2_d1_3:
+.joy2_3:
   pha
   txa
   sta [draw_offsets + 22], y
@@ -282,10 +282,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy2_d1_4
+  bcs .joy2_4
   inx
   inx
-.joy2_d1_4:
+.joy2_4:
   pha
   txa
   sta [draw_offsets + 24], y
@@ -293,10 +293,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy2_d1_5
+  bcs .joy2_5
   inx
   inx
-.joy2_d1_5:
+.joy2_5:
   pha
   txa
   sta [draw_offsets + 26], y
@@ -304,10 +304,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy2_d1_6
+  bcs .joy2_6
   inx
   inx
-.joy2_d1_6:
+.joy2_6:
   pha
   txa
   sta [draw_offsets + 28], y
@@ -315,10 +315,10 @@ read_controller:
 
   lsr A
   ldx #$8C
-  bcs .joy2_d1_7
+  bcs .joy2_7
   inx
   inx
-.joy2_d1_7:
+.joy2_7:
   pha
   txa
   sta [draw_offsets + 30], y
@@ -350,7 +350,7 @@ waitblank:
   pha
   bit PPUSTATUS
 .loop:
-  lda PPUSTATUS  ; load A with value at location PPUSTATUS
+  bit PPUSTATUS  ; load A with value at location PPUSTATUS
   bpl .loop  ; if bit 7 is not set (not VBlank) keep checking
   pla
   rts
