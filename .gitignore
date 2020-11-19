@@ -1,0 +1,7 @@
+﻿tools/
+*.nes
+*.deb
+*.lst
+*.nl
+*.bin
+
