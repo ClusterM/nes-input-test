@@ -2,8 +2,8 @@ NESASM=tools/NESASM.EXE
 EMU=fceux
 TILER=tools/NesTiler.exe
 TEXT_CONVERTER=tools/TextConverter.exe
-SOURCE=controller.asm
-EXECUTABLE=controller.nes
+SOURCE=input_test.asm
+EXECUTABLE=input_test.nes
 BG_IMAGE=bg.png
 BITS_IMAGE=bits.png
 
