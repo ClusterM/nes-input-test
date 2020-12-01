@@ -1,5 +1,3 @@
-[README на Русском](https://github.com/kotleni/nes-input-test/blob/main/README_ru.md)
-
 # NES Input Test ROM
 This is simple NES/Famicom ROM to test different input accessories.
 
